@@ -60,12 +60,12 @@
 			children = (
 				2343BC3F25CD395D0023CD90 /* AppDelegate.swift */,
 				2343BC4125CD395D0023CD90 /* SceneDelegate.swift */,
+				2343BC5825CD3A390023CD90 /* TableViewController.swift */,
 				2343BC4525CD395D0023CD90 /* Main.storyboard */,
 				2343BC4B25CD395E0023CD90 /* Assets.xcassets */,
 				2343BC4D25CD395E0023CD90 /* LaunchScreen.storyboard */,
 				2343BC5025CD395E0023CD90 /* Info.plist */,
 				2343BC4825CD395D0023CD90 /* CoreDataDemo.xcdatamodeld */,
-				2343BC5825CD3A390023CD90 /* TableViewController.swift */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";

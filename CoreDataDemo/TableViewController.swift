@@ -6,10 +6,27 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
 
-    var toDoItems = [String]()
+    var toDoItems = [Task]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        do{
+            toDoItems = try context.fetch(fetchRequest)
+            toDoItems.reverse()
+            print("load")
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +45,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel?.text = toDoItems[indexPath.row]
+        let task = toDoItems[indexPath.row]
+        
+        cell.textLabel?.text = task.taskToDo
 
         return cell
     }
@@ -37,7 +56,8 @@ class TableViewController: UITableViewController {
         let alert = UIAlertController(title: "Add task", message: "add new task", preferredStyle: .alert)
         let ok = UIAlertAction(title: "ok", style: .default){ [weak self] _ in
             let text = alert.textFields?.first?.text ?? ""
-            self?.toDoItems.insert(text, at: 0)
+            self?.saveTask(taskToDo: text)
+//            self?.toDoItems.insert(text, at: 0)
             self?.tableView.reloadData()
         }
         
@@ -47,6 +67,25 @@ class TableViewController: UITableViewController {
         
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func saveTask(taskToDo: String){
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Task", in: context)
+        let entityObject = NSManagedObject(entity: entity!, insertInto: context) as! Task
+        
+        entityObject.taskToDo = taskToDo
+        
+        do{
+            try context.save()
+            toDoItems.insert(entityObject, at: 0)
+            print("Saved!")
+        }catch{
+            print(error.localizedDescription)
+        }
+//        let entity =
     }
     
     /*
