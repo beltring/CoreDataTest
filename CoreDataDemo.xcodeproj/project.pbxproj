@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		2343BC4025CD395D0023CD90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343BC3F25CD395D0023CD90 /* AppDelegate.swift */; };
 		2343BC4225CD395D0023CD90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343BC4125CD395D0023CD90 /* SceneDelegate.swift */; };
-		2343BC4425CD395D0023CD90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343BC4325CD395D0023CD90 /* ViewController.swift */; };
 		2343BC4725CD395D0023CD90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2343BC4525CD395D0023CD90 /* Main.storyboard */; };
 		2343BC4A25CD395D0023CD90 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2343BC4825CD395D0023CD90 /* CoreDataDemo.xcdatamodeld */; };
 		2343BC4C25CD395E0023CD90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2343BC4B25CD395E0023CD90 /* Assets.xcassets */; };
 		2343BC4F25CD395E0023CD90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2343BC4D25CD395E0023CD90 /* LaunchScreen.storyboard */; };
+		2343BC5925CD3A390023CD90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343BC5825CD3A390023CD90 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2343BC3C25CD395D0023CD90 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2343BC3F25CD395D0023CD90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2343BC4125CD395D0023CD90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2343BC4325CD395D0023CD90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2343BC4625CD395D0023CD90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2343BC4925CD395D0023CD90 /* CoreDataDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo.xcdatamodel; sourceTree = "<group>"; };
 		2343BC4B25CD395E0023CD90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2343BC4E25CD395E0023CD90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2343BC5025CD395E0023CD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2343BC5825CD3A390023CD90 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +60,12 @@
 			children = (
 				2343BC3F25CD395D0023CD90 /* AppDelegate.swift */,
 				2343BC4125CD395D0023CD90 /* SceneDelegate.swift */,
-				2343BC4325CD395D0023CD90 /* ViewController.swift */,
 				2343BC4525CD395D0023CD90 /* Main.storyboard */,
 				2343BC4B25CD395E0023CD90 /* Assets.xcassets */,
 				2343BC4D25CD395E0023CD90 /* LaunchScreen.storyboard */,
 				2343BC5025CD395E0023CD90 /* Info.plist */,
 				2343BC4825CD395D0023CD90 /* CoreDataDemo.xcdatamodeld */,
+				2343BC5825CD3A390023CD90 /* TableViewController.swift */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2343BC4425CD395D0023CD90 /* ViewController.swift in Sources */,
 				2343BC4A25CD395D0023CD90 /* CoreDataDemo.xcdatamodeld in Sources */,
 				2343BC4025CD395D0023CD90 /* AppDelegate.swift in Sources */,
 				2343BC4225CD395D0023CD90 /* SceneDelegate.swift in Sources */,
+				2343BC5925CD3A390023CD90 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
